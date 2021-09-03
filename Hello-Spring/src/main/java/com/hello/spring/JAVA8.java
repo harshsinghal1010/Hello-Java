@@ -3,6 +3,7 @@ package com.hello.spring;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -77,6 +78,12 @@ public class JAVA8 {
 		uList.stream().sorted(userComparator).forEach(c);
 		System.out.println(" ");
 		uList.stream().sorted(descComp).forEach(c);
+		System.out.println(" ");
+		// min and max
+		User user7 = uList.stream().min(descComp).get();
+		User user8 = uList.stream().max(descComp).get();
+		System.out.println("user7 "+user7);
+		System.out.println("user8 "+user8);
 
 		
 	}

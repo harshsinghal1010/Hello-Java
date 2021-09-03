@@ -84,6 +84,13 @@ public class JAVA8 {
 		User user8 = uList.stream().max(descComp).get();
 		System.out.println("user7 "+user7);
 		System.out.println("user8 "+user8);
+		
+		// joining....
+		String l = uList.stream()
+				.map(User::getEmail)
+				.collect(Collectors.joining("----"));
+		System.out.println(l);
+		
 
 		
 	}
